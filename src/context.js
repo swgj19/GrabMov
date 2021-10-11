@@ -7,7 +7,7 @@ const AppContext = React.createContext();
 // console.log(API_ENDPOINT);
 
 const AppProvider = ({ children }) => {
-	const [query, setQuery] = useState('batman');
+	const [query, setQuery] = useState('action');
 	const { isLoading, error, data: movies } = useFetch(`&s=${query}`);
 	return (
 		<AppContext.Provider value={{ isLoading, error, movies, query, setQuery }}>
